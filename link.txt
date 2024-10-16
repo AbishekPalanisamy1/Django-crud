@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Contact</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for account in accounts%}
+            <br>
+            <tr>
+                <td>
+                    {{account.a_id}}
+                </td>
+                <td>{{account.a_name}}</td>
+                <td>{{account.a_email}}</td>
+                <td>{{account.a_contact}}</td>
+                <td>
+                    <a href="/edit/{{account.id}}"> Edit</a>          
+                    <a href="/dlt/{{account.id}}">Delete</a>      
+                </td>
+
+            </tr>
+          {% endfor %}
+        </tbody>
+
+    </table>
+    <br> <br>
+    <button><a href="/student">Add Registration</a></button>
+</body>
+</html>

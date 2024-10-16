@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+
+    <form action="/account" method="POST"> 
+        {% csrf_token %}
+
+        <div>
+            <h2>Registration</h2>
+        </div>
+
+        <div>
+            <p>ID:</p> {{form.a_id}}
+        </div>
+        
+        <div>
+            <p>NAME:</p>{{form.a_name}}
+        </div>
+        
+        <div>
+            <p>EMAIL:</p>{{form.a_email}}
+        </div>
+        
+        <div>
+            <p>CONTACT:</p>{{form.a_contact}}
+        </div>
+
+        <div>
+            <p>Address:</p>{{form.a_address}}
+        </div>
+
+        <div>
+            <br> <br>
+            <button type="submit"> Submit  
+                <button class="btn"> <a href="/show">Show Data</a></form>
+    
+</body>
+</html>
